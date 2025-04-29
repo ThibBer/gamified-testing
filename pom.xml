@@ -61,6 +61,7 @@
                 <version>1.19.1</version>
                 <configuration>
                     <outputFormats>
+                        <csvReportHeader>true</csvReportHeader>
                         <outputFormat>CSV</outputFormat>
                         <outputFormat>XML</outputFormat>
                         <outputFormat>HTML</outputFormat>
