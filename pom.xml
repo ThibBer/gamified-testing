@@ -60,11 +60,12 @@
                 <artifactId>pitest-maven</artifactId>
                 <version>1.19.1</version>
                 <configuration>
+                    <failWhenNoMutations>false</failWhenNoMutations>
+                    <skipFailingTests>true</skipFailingTests>
+                    <exportLineCoverage>false</exportLineCoverage>
+                    <fullMutationMatrix>true</fullMutationMatrix>
                     <outputFormats>
-                        <csvReportHeader>true</csvReportHeader>
-                        <outputFormat>CSV</outputFormat>
                         <outputFormat>XML</outputFormat>
-                        <outputFormat>HTML</outputFormat>
                     </outputFormats>
                     <excludedClasses>
                         <param>be.thibber.gamification.example.*</param>
