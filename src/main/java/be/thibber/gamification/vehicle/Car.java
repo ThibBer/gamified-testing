@@ -7,7 +7,7 @@ import java.util.List;
 
 public class Car extends Vehicle {
     private int seatsCount;
-    private List<Person> passengers;
+    private List<Person> passengers = new ArrayList<>();
 
     /**
      * Constructs a new {@code Vehicle} with the specified initial speed, seats count & passengers.
@@ -50,7 +50,7 @@ public class Car extends Vehicle {
             throw new IllegalArgumentException("Person cannot be null");
         }
 
-        if(passengers.size() < seatsCount) {
+        if(passengers.size() >= seatsCount) {
             throw new IllegalStateException("No more seats available");
         }
 
@@ -92,7 +92,7 @@ public class Car extends Vehicle {
      */
     @Override
     public void setSpeed(double speed) {
-        if(passengers.isEmpty()) {
+        if(passengers != null && passengers.isEmpty()) {
             throw new IllegalStateException("No passengers in the vehicle");
         }
 
